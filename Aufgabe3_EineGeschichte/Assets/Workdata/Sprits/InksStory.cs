@@ -53,6 +53,11 @@ public class InkStory : MonoBehaviour
     
     void Update()
     {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+          Application.Quit();
+        }
+        
         if (Keyboard.current.spaceKey.wasPressedThisFrame) 
         {
             GetNextStoryStep();
@@ -69,6 +74,7 @@ public class InkStory : MonoBehaviour
         {
             SelectChoice(2);
         }
+       
       
     }
 
